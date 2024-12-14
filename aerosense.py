@@ -17,7 +17,7 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 def load_models_and_scaler():
     nn_model = keras.models.load_model('best_model.keras')
     xgb_model = joblib.load('xgboost_model.joblib')
-    rf_model = joblib.load('random_forest_model.joblib')
+    rf_model = joblib.load('random_forest_model_compressed.joblib')
     scaler = joblib.load('minmax_scaler.joblib')
     return nn_model, xgb_model, rf_model, scaler
 
